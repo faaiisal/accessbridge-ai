@@ -26,6 +26,7 @@ import {
 } from "@/lib/accessibility/analyze";
 import { accessLensInputSchema } from "@/lib/schemas/accesslens";
 import { StatusPill } from "@/components/shared/StatusPill";
+import { UrlScanPanel } from "@/components/modules/url-scan-panel";
 import { useState } from "react";
 
 const starterCode = `<!doctype html>
@@ -195,6 +196,10 @@ export function AccessLensWorkspace() {
           <span>03</span> Verify
         </li>
       </ol>
+
+      <div style={{ marginBottom: 16 }}>
+        <UrlScanPanel />
+      </div>
 
       <section className="editor-card" aria-labelledby="editor-heading">
         <div className="editor-card-header">
